@@ -1,0 +1,7 @@
+.App{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(95rem, 75%) minmax(0, 1fr);
+    grid-template-rows: auto auto; 
+}

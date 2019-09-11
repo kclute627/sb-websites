@@ -1,0 +1,105 @@
+.homepage{
+
+
+
+    &__container{
+        grid-column: 1/-1;
+        grid-row:1/2;        
+        background:#fff;
+        display: grid;
+        grid-template-columns: minmax(0, .25fr) minmax(95rem, 25%) minmax(0, .25fr); 
+        grid-template-rows: 10rem minmax(30rem, .5fr) auto; 
+        z-index: 0;
+        background: linear-gradient(to bottom,
+        rgba(163, 241, 196, .7) 0%,
+        rgba(96, 163, 149, .70) 100%
+        ),
+        url(../../assets/annie-spratt-QckxruozjRg-unsplash-min.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+
+        
+    
+    }
+
+    &__header{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        justify-self: start;
+        align-self: center;
+    
+
+
+        &-1{
+            color: #fff;
+            font-size: 2.5rem;
+
+        }
+    }
+
+
+
+
+
+
+
+    &__images{
+        grid-row: 3/4;
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        align-items: start;
+        height: 100%;
+        
+       
+        &-header{
+            grid-column: 1/-1;
+            grid-row: 1/2;
+        }
+
+
+        &-1{
+            height: 55rem;
+            width: 55rem;
+            grid-column: 1/2;
+            grid-row: 2/3;
+
+        }
+        
+        &-3{
+            height: 30rem;
+            width: 45rem;
+            margin-left: -20rem;
+            margin-top: 8rem;
+            grid-column: 2/3;
+            grid-row: 2/3;
+
+        }
+        &-4{
+            height: 50rem;
+            width: 55rem;
+            margin-left: -22rem;
+           padding-bottom: 8rem;
+            grid-column: 3/4;
+            grid-row: 2/3;
+        }
+        &-5{
+            grid-column: 5/6;
+            grid-row: 2/3;
+            height: 55rem;
+            width: 55rem;
+            align-self: start;
+            justify-self: start;
+            margin-left: -30rem;
+            padding-top: 4rem;
+        }
+        
+
+    }
+
+}
