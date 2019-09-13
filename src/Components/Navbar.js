@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactSvg from "react-svg";
-import logo from '../assets/logo2.svg'
+import logo from '../assets/logo.svg'
 
 
 
@@ -22,8 +22,9 @@ class Navbar extends Component {
                         <li className="navbar__links-list-item">
                             <a href="#">Pricing</a>
                         </li>
+                        
                         <li className="navbar__links-list-item">
-                            <a href="#">Service</a>
+                            <a href="#">Our Work</a>
                         </li>
                         <li className="navbar__links-list-item">
                             <a href="#">Contact Us</a>

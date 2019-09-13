@@ -1,18 +1,17 @@
 import React, { Component } from "react";
-import ReactSvg from "react-svg";
-import imac from "../../assets/Imac.png";
-import arrow from "../../assets/arrow.svg";
-import laptop from "../../assets/Laptop.png";
-import ipad from "../../assets/Ipad.png";
-import iphone from "../../assets/iphoneX2.png";
-import Images from "../Images";
+import ReactRotatingText from 'react-rotating-text';
 
 class Homepage extends Component {
   render() {
     return (
       <div className="homepage__container">
         <div className="homepage__header">
-          <h1 className="hompage__header-1">Let us help you make your mark!</h1>
+          <h1 className="homepage__header-1">
+            We Can Help
+          </h1>
+          <ReactRotatingText className ='rotate' pause={2500} items={['Build Stunning Websites', 'Grow your business', 'Get your Business Noticed', 'You Worry Less']} />
+
+          
         </div>
       </div>
     );
@@ -20,3 +19,6 @@ class Homepage extends Component {
 }
 
 export default Homepage;
+
+
+//

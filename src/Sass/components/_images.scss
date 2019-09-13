@@ -68,8 +68,8 @@
 
 
   &__arrow{
-      grid-column: 4/5;
-      grid-row: 2/3;
+    grid-column: 4/5;
+    grid-row: 2/3;
       align-self: center;
       justify-self: end;
       height: 18rem;
@@ -80,6 +80,30 @@
           fill: $color-primary-dark;
           cursor: pointer;
       }
+
+      &-left{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        align-self: center;
+        justify-self: end;
+        height: 10rem;
+        width: 10rem;
+        margin-bottom: 8rem;
+
+        & svg{
+            margin-right: 1rem;
+            fill: $color-primary-dark;
+            cursor: pointer;
+        }
+
+      }
       
   }
+}
+
+.arrow{
+
+    &-hidden{
+        display: none;
+    }
 }

@@ -2,8 +2,8 @@
   &__container {
     grid-column: 1/-1;
     grid-row: 1/2;
-    background: black;
-    height: 10rem;
+    background: transparent;
+    height: 15rem;
     width: 100%;
     z-index: 25;
     display: grid;
@@ -17,8 +17,8 @@
     justify-items: center;
 
     & svg {
-      height: 10.5rem;
-      width: 16.5rem;
+      height: 15.5rem;
+      width: 26.5rem;
       fill: #fff;
     }
   }
@@ -32,7 +32,7 @@
       list-style: none;
       align-content: center;
       justify-self: end;
-      margin-top: 3.5rem;
+      margin-top: 7rem;
       font-size: 2rem;
 
       &-item {
