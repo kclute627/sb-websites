@@ -32,8 +32,10 @@
     justify-self: center;
     align-self: start;
     text-transform: capitalize;
-    line-height: 5.5rem;
+    line-height: 7.5rem;
     margin-top: 17rem;
+    font-weight: 7 00;
+
 
     &-1 {
       color: #fff;
@@ -42,9 +44,9 @@
 
       & span {
         
-        background: linear-gradient(90deg, rgba(25,221,219,1) 0%, rgba(182,213,209,1) 25%, rgba(128,150,154,1) 59%, rgba(9,192,226,1) 95%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        // background: linear-gradient(90deg, rgba(25,221,219,1) 0%, rgba(182,213,209,1) 25%, rgba(128,150,154,1) 59%, rgba(9,192,226,1) 95%);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
       }
     }
     &-2 {

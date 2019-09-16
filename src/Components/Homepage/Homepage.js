@@ -7,9 +7,9 @@ class Homepage extends Component {
       <div className="homepage__container">
         <div className="homepage__header">
           <h1 className="homepage__header-1">
-            We Can Help
+            Helping your business <ReactRotatingText className ='rotate' pause={2500} items={[ 'Grow and profit more', 'Rank higher Than your Compitetion', 'Save Time and Money', 'impress clients with a stunning website']} />
           </h1>
-          <ReactRotatingText className ='rotate' pause={2500} items={['Build Stunning Websites', 'Grow your business', 'Get your Business Noticed', 'You Worry Less']} />
+          
 
           
         </div>
