@@ -1,1 +1,17 @@
-import React from 'react';m
+import React from 'react';
+
+
+
+
+
+
+const Button = (props) => {
+
+    return(
+        <div className="btn__container">
+            <button className="btn__large"> {props.text} </button>
+        </div>
+    )
+}
+
+export default button; 
