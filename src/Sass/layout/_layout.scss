@@ -3,5 +3,5 @@
     padding: 0;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(95rem, 75%) minmax(0, 1fr);
-    grid-template-rows: minmax(auto, 100vh) auto; 
+    grid-template-rows: minmax(auto, 100vh) auto auto auto; 
 }
