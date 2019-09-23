@@ -14,14 +14,16 @@
 
   &__container{
       display: grid;
+      grid-template: 1fr 1fr 1fr 1fr;
    
   }
 
   &-header {
-    grid-column: 1/6;
+    grid-column: 1/5;
+    margin-left: 9rem;
     grid-row: 1/2;
     color: black;
-    align-self: end;
+    align-self: center;
     justify-self: center;
     font-size: 5.5rem;
     font-weight: 700;

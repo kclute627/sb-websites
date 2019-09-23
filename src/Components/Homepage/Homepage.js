@@ -10,7 +10,8 @@ class Homepage extends Component {
             Helping your business{" "}
             <ReactRotatingText
               className="rotate"
-              pause={2500}
+              pause={2000}
+              typingInterval={70}
               items={[
                 "Grow and profit more",
                 "Rank higher Than your Compitetion",
