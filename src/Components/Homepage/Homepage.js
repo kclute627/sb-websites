@@ -22,7 +22,9 @@ class Homepage extends Component {
           </h1>
         </div>
         <div className="homepage__btn-container">
-          <button className="homepage__btn-1">Pricing</button>
+          <a href="#price">
+            <button  className="homepage__btn-1">Pricing</button>
+          </a>
           <button className="homepage__btn-2">Get Started</button>
         </div>
       </div>

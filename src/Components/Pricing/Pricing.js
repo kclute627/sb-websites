@@ -4,7 +4,7 @@ import PricingBox from "../Pricing/PricingBox";
 class Pricing extends Component {
   render() {
     return (
-      <div className="pricing" id='pricing'>
+      <div className="pricing" id='price'>
           <h1 className="pricing__header">
               Get Started Today
           </h1>
@@ -12,12 +12,14 @@ class Pricing extends Component {
           <PricingBox
             header={"Single Page Website"}
             pricing={"$699"}
-            description={
-              "We will build a single page website for your business. Your new website will be fully Search Engine Optimized and easy for your clients to navigate."
-            }
-          />
+            description1={"Single Page Website"}
+            description2={"Search Engine Optomizied"}
+            description3={"As many sections as you want"}
+          
+                      />
           <PricingBox />
           <PricingBox />
+          
         </div>
       </div>
     );

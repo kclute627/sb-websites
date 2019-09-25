@@ -1,5 +1,7 @@
 import React from 'react';
-import { privateEncrypt } from 'crypto';
+import ReactSvg from 'react-svg';
+import  check from '../../assets/tick.svg';
+
 
 
 
@@ -15,7 +17,12 @@ const PricingBox = props => {
                 {props.pricing}
             </div>
             <div className="pricing__pricingBox-description">
-                {props.description}
+                <ul>
+                    <li className="pricing__pricingBox-description-4"> <ReactSvg src={check}/></li>
+                    <li className="pricing__pricingBox-description-1">{props.description1}</li>
+                    <li className="pricing__pricingBox-description-2">{props.description2}</li>
+                    <li className="pricing__pricingBox-description-3">{props.description3}</li>
+                </ul>
             </div>
             <button className="pricing__pricingBox-cta">
                 Buy Now
