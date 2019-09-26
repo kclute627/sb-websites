@@ -6,7 +6,7 @@ class Pricing extends Component {
     return (
       <div className="pricing" id='price'>
           <h1 className="pricing__header">
-              Get Started Today
+              Website Packages
           </h1>
         <div className="pricing__container">
           <PricingBox
