@@ -5,7 +5,7 @@ import check from "../../assets/tick.svg";
 const PricingBox = props => {
   return (
      
-    <div className="pricing__pricingBox">
+    <div className={props.popular ? "pricing__pricingBox popular-box": "pricing__pricingBox"} >
        <div className={props.popular ? "pricing__pricingBox-popular":  "pricing__pricingBox-popular-1" }>Most Popular</div>
       <div className="pricing__pricingBox-header">{props.header}</div>
       <div className="pricing__pricingBox-price">{props.pricing}</div>

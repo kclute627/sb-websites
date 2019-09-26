@@ -3,8 +3,13 @@
   grid-column: 1/-1;
   background: rgb(236, 236, 236);
   padding-bottom: 8rem;
+  
+
+  
   &__container {
     color: black;
+   
+    
 
     display: flex;
     justify-content: center;
@@ -25,9 +30,11 @@
   }
 
   &__pricingBox {
+   
+    
     
     margin-top: 7rem;
-    margin-right: 15rem;
+    margin-right: 10rem;
     height: 37rem;
     width: 35rem;
     //    border: 2px solid black;
@@ -36,12 +43,15 @@
     text-align: center;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
     &:first-child{
-      margin-left:7rem;
+      margin-left: 7rem;
     }
     &-header {
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: 2.5rem;
+      font-weight: 400;
       text-transform: uppercase;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid $color-primary-dark;
+      
     }
     &-price {
       color: darken($color-primary, 40%);
@@ -151,25 +161,44 @@
       border-radius: 100rem;
       background: #111;
       outline: none;
+      transition: all .3s;
+    
+
+      &:hover{
+        background: #fff;
+        border: 2px $color-primary solid;
+       
+        cursor: pointer;
+        background: $color-primary;
+        color: black;
+      }
 
     }
 
     &-popular {
+     
       width: 100%;
       height: 4rem;
-      color: white; 
-      background: rgb(31, 9, 223);
+      color: #fff;
+      background: linear-gradient(132deg, rgba(139,230,72,1) 0%, rgba(71,144,17,1) 50%, rgba(42,208,72,1) 95%);
       margin-top: -3.5rem;
       margin-bottom: 1rem;
       padding-top: 1rem;
+    
 
       &-1{
         display: none;
+        
       }
+     
     }
   }
 }
 
 .popular{
   margin-top: 2rem;
+
+  &-box{
+    box-shadow: 20px 25px 25px rgba(0, 0, 0, 0.6);
+  }
 }
