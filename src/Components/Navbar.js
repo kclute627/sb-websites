@@ -11,7 +11,7 @@ class Navbar extends Component {
         return(
             <div className="navbar__container">
                 <div className="navbar__logo">
-                    <ReactSvg classname="navbar__logo-1" src={logo}/>
+                    <ReactSvg className="navbar__logo-1" src={logo}/>
 
                 </div>
                 <div className="navbar__links">
