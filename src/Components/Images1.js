@@ -3,7 +3,7 @@ import React, {Fragment} from 'react';
 
 
 const Images1 = (props)=> {
-    const {imac, laptop, ipad, iphone} = props;
+    const { laptop, ipad, iphone, imac} = props;
     return(
         <Fragment>
             <img className="images-1" src={imac} alt="" />

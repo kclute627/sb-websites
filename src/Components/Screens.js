@@ -1,10 +1,5 @@
 import React, { Component } from 'react'; 
-import imac from "../assets/Imac.png";
 
-import laptop from "../assets/Laptop.png";
-import ipad from "../assets/Ipad.png";
-import iphone from "../assets/iphoneX2.png";
-import Images from '../Components/Images';
 
 
 
@@ -18,7 +13,7 @@ class Screens extends Component {
 
             return(
                 <div className="screen__container">
-                      <Images iphone ={iphone} imac= {imac} laptop={laptop} ipad={ipad} />
+                      <Images imac={imac} iphone ={iphone}  laptop={laptop} ipad={ipad} />
                 </div>
               
 

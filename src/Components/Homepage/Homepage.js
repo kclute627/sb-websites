@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ReactRotatingText from "react-rotating-text";
-import Getstarted from '../GetStarted';
-import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 
 class Homepage extends Component {
@@ -45,10 +44,13 @@ class Homepage extends Component {
           <a href="#price">
             <button  className="homepage__btn-1">Pricing</button>
           </a>
-          <a>
-          <Link to='/started' className="homepage__btn-2" >
+          <a>            
+          <Link to='/started'>
+           <button className="homepage__btn-2">
+             Get Started
+          </button>  
            
-              Get Started
+              
           </Link>
           </a> 
           
