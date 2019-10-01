@@ -1,10 +1,30 @@
 import React, { Component } from "react";
 import ReactRotatingText from "react-rotating-text";
+import Getstarted from '../GetStarted';
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
+
 
 class Homepage extends Component {
+
+  state = {
+    started: false,
+  }
+
+  
+  click = () => {
+    
+    this.setState({
+      started: true,
+    })
+  }
+
   render() {
+
+   
+   
     return (
-      <div className="homepage__container">
+     
+        <div className="homepage__container">
         <div className="homepage__header">
           <h1 className="homepage__header-1">
             Helping your business{" "}
@@ -25,12 +45,20 @@ class Homepage extends Component {
           <a href="#price">
             <button  className="homepage__btn-1">Pricing</button>
           </a>
-          <a href="#start">
-            <button className="homepage__btn-2">Get Started</button>
-          </a>
+          <a>
+          <Link to='/started' className="homepage__btn-2" >
+           
+              Get Started
+          </Link>
+          </a> 
           
+         
         </div>
       </div>
+       
+    
+       
+      
     );
   }
 }

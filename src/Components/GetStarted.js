@@ -30,3 +30,5 @@ class GetStarted extends Component{
         )
     }
 }
+
+export default GetStarted;
