@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import ReactSvg from 'react-svg';
-import arrow from '../assets/arrow.svg';
-import lArrow from '../assets/larrow.svg';
-import Images1 from '../Components/Images1';
-import imac from "../assets/mockups/imac.png";
-import imac2 from "../assets/mockups/imac2.png";
-import laptop from "../assets/mockups/laptop.png";
-import laptop2 from "../assets/mockups/laptop2.png";
-import ipad from "../assets/mockups/Ipad.png";
-import ipad2 from "../assets/mockups/Ipad2.png";
-import iphone from "../assets/mockups/iphoneX2.png";
-import iphone2 from "../assets/mockups/iphone2.png";
+import arrow from '../../assets/arrow.svg';
+import lArrow from '../../assets/larrow.svg';
+import Images1 from './Images1';
+import imac from "../../assets/mockups/imac.png";
+import imac2 from "../../assets/mockups/imac2.png";
+import laptop from "../../assets/mockups/laptop.png";
+import laptop2 from "../../assets/mockups/laptop2.png";
+import ipad from "../../assets/mockups/Ipad.png";
+import ipad2 from "../../assets/mockups/Ipad2.png";
+import iphone from "../../assets/mockups/iphoneX2.png";
+import iphone2 from "../../assets/mockups/iphone2.png";
 
 class Images extends Component {
 

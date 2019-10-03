@@ -4,7 +4,7 @@ import "./Sass/main.scss";
 import App from "./Components/App";
 import GettingStarted from "./Components/GetStarted";
 import Faq from './Components/Faq';
-import Work from './Components/Work';
+import Work from './Components/port/Work';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 

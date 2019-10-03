@@ -1,7 +1,7 @@
 import React from "react";
 import Homepage from "../Components/Homepage/Homepage";
 import Navbar from "../Components/Navbar";
-import Images from "../Components/Images";
+import Images from "../Components/Screens/Images";
 import Pricing from "./Pricing/Pricing";
 
 function App() {

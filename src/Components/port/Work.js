@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Navbar from "./Navbar";
+import Navbar from "../Navbar";
 
 class work extends Component {
   render() {
@@ -10,6 +10,9 @@ class work extends Component {
         </div>
         <div className="work__header">
             <h1>Check Out Some of our Recent Work</h1>
+        </div>
+        <div className="work__port">
+            
         </div>
     
       </div>
