@@ -7,7 +7,8 @@ import Pricing from "./Pricing/Pricing";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Navbar
+      center = 'true' />
       <Homepage />
       <Images  />
       <Pricing />

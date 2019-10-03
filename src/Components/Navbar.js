@@ -5,12 +5,13 @@ import logo from "../assets/logo.svg";
 
 class Navbar extends Component {
   render() {
+    let {center} = this.props;
     return (
       <div className="navbar__container">
-        <div className="navbar__logo">
+        <div className= {center ? "navbar__logo center" : "navbar__logo start"} >
           <ReactSvg className="navbar__logo-1" src={logo} />
         </div>
-        <div className="navbar__links">
+        <div className={center? "navbar__links" : "navbar__links work-navbar"}>
           <ul className="navbar__links-list">
             <li className="navbar__links-list-item">
               <Link to="/">Home</Link>
