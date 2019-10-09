@@ -1,7 +1,47 @@
 import React, { Component } from "react";
 import Navbar from "./Navbar";
 
+
+
+const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+  
+
 class GetStarted extends Component {
+    state = {
+        name: '',
+        email: '',
+        message: '',
+        website: '',
+    }
+
+    submitHandler = e => {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact", ...this.state })
+        })
+          .then(() =>
+            this.setState({
+              name: "",
+              email: "",
+              message: "",
+              messageSent: true
+            })
+          ).then(()=> this.setState({messageSent: false}))
+          .catch(error => alert(error));
+    
+        e.preventDefault();
+      };
+
+      changeHandler = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+          });
+      }
   render() {
     return (
       <div className="getstarted__container">
@@ -18,6 +58,7 @@ class GetStarted extends Component {
               className="getstarted__form-name"
               type="text"
               name="name"
+              onChange= {this.changeHandler}
             />
             <label htmlFor="" className="getstarted__form-label">
               Email Address
@@ -26,9 +67,11 @@ class GetStarted extends Component {
               type="email"
               name="email"
               className="getstarted__form-emai"
+              onChange= {this.changeHandler}
             />
 
-            <select name="website">
+            <select name="website"  onChange= {this.changeHandler}>
+                <option value='null'></option>
                 <option value="single">Single Page Website</option>
                 <option value="5page">5 Page Website</option>
                 <option value ="10page">10 Page Website</option>
@@ -57,9 +100,9 @@ class GetStarted extends Component {
               className="getstarted__form-message"
             ></textarea>
 
-            <input type='file' name="file"/>
+            
 
-            <input type="submit" className="getstarted__form-submit" />
+            <button type="submit" className="getstarted__form-submit" onSubmit={this.submitHandler} >Submit </button>
             <input type="hidden" name="form-name" value="contact" />
           </form>
         </div>
