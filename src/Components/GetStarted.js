@@ -16,9 +16,11 @@ class GetStarted extends Component {
         email: '',
         message: '',
         website: '',
+        messageSent: null,
     }
 
     submitHandler = e => {
+        
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -29,12 +31,13 @@ class GetStarted extends Component {
               name: "",
               email: "",
               message: "",
+              website: '',
               messageSent: true
             })
           ).then(()=> this.setState({messageSent: false}))
           .catch(error => alert(error));
     
-        e.preventDefault();
+          e.preventDefault();
       };
 
       changeHandler = e => {
@@ -49,7 +52,7 @@ class GetStarted extends Component {
           <Navbar />
         </div>
         <div className="getstarted__form">
-          <form action="" className="getstarted__forms">
+          <form action="" className="getstarted__forms" onSubmit={this.submitHandler}>
             <label htmlFor="" className="getstarted__form-label">
               Please Provide your Name
             </label>
@@ -102,7 +105,7 @@ class GetStarted extends Component {
 
             
 
-            <button type="submit" className="getstarted__form-submit" onSubmit={this.submitHandler} >Submit </button>
+            <button type="submit" className="getstarted__form-submit" >Submit </button>
             <input type="hidden" name="form-name" value="contact" />
           </form>
         </div>
