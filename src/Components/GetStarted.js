@@ -28,6 +28,12 @@ class GetStarted extends Component {
               className="getstarted__form-emai"
             />
 
+            <select name="website">
+                <option value="single">Single Page Website</option>
+                <option value="5page">5 Page Website</option>
+                <option value ="10page">10 Page Website</option>
+            </select>
+
             <label>
               <input type="radio" value="option1" checked={true} />
               Option 1
@@ -51,11 +57,14 @@ class GetStarted extends Component {
               className="getstarted__form-message"
             ></textarea>
 
+            <input type='file' name="file"/>
+
             <input type="submit" className="getstarted__form-submit" />
             <input type="hidden" name="form-name" value="contact" />
           </form>
         </div>
         <div className="getstarted__footer"></div>
+
       </div>
     );
   }
