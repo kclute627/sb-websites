@@ -3,7 +3,7 @@
     &__container{       
          
         display: grid;
-        grid-template-rows: 15rem minmax(40rem, 80vh) 10rem;
+        grid-template-rows: 15rem minmax(40rem, auto) 10rem;
         grid-template-columns: .4fr minmax(900px, .95fr) .4fr;
         background: rgb(144, 144, 144);
     }
@@ -30,6 +30,11 @@
             height: 14rem;
 
         }
+
+        &-sites{
+            resize: none;
+            padding: 1.5rem;
+        }
        
     }
     &__forms{
@@ -53,4 +58,11 @@
         resize: none;
         margin-bottom: 3rem;
     }
+}
+
+.colorpicker__square{
+    height: 5rem;
+    width: 5rem;
+    background: blue;
+    margin: 3rem;
 }

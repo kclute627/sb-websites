@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "./Navbar";
+import { SketchPicker } from 'react-color';
 
 const encode = data => {
   return Object.keys(data)
@@ -13,8 +14,12 @@ class GetStarted extends Component {
     email: "",
     message: "",
     website: "",
-    messageSent: null
+    messageSent: null,
+    background: '#fff'  
   };
+
+
+
 
   submitHandler = e => {
     fetch("/", {
@@ -42,10 +47,15 @@ class GetStarted extends Component {
       [e.target.name]: e.target.value
     });
   };
+
+  colorHandler = (color, event) => {
+      this.setState({background: color.hex})
+
+  }
   render() {
-    const { name, message, email, website } = this.state;
+    const { name, message, email, website, background } = this.state;
     return (
-      <div className="getstarted__container">
+      <div className="getstarted__container" style={{background }}>
         <div className="getstarted__nav">
           <Navbar />
         </div>
@@ -78,32 +88,45 @@ class GetStarted extends Component {
             />
 
             <select name="website" onChange={this.changeHandler}>
-              ><option value="null"></option>
-              <option value="single">Single Page Website</option>
+              
+              <option value="single" selected='true'>Single Page Website</option>
               <option value="5page">5 Page Website</option>
               <option value="10page">10 Page Website</option>
             </select>
 
-            <label>
-              <input type="radio" value="option1" checked={true} />
-              Option 1
-            </label>
-
-            <label>
-              <input type="radio" value="option2" />
-              Option 2
-            </label>
-
-            <label>
-              <input type="radio" value="option3" />
-              Option 3
-            </label>
+            
 
             <label htmlFor="" className="getstarted__form-input">
-              Send us a note
+              Tell Us a few things before we get GetStarted
+              <ol>
+                  <li>What Industry Is your business in</li>
+                  <input type="text"/>
+                  <li>List several Websits you like</li>
+                  <textarea className="getstarted__form-sites">
+
+                  </textarea>
+                  <li>Do you Currenty Have a Domian Name and Logo</li>
+                  <select>
+                      <option value="no">No</option>
+                      <option value="yes">Yes</option>
+                  </select>
+                  <li>Will you need hosting?</li>
+                  <select>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                  </select>
+                  <li>Colors You would like used on your website?</li>
+                  <div className ="colorpicker__square">
+
+                  </div>
+                  <SketchPicker
+                  color={background}
+                  onChangeComplete={this.colorHandler} />
+              </ol>
             </label>
             <textarea
               value={message}
+              onChange={this.changeHandler}
               name="message"
               className="getstarted__form-message"
             ></textarea>
