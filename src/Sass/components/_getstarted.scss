@@ -9,9 +9,11 @@
     }
     &__form{
         grid-column: 2/3;
-        grid-row: 2/3;      
-        margin: 0 auto;        
+        grid-row: 2/3;     
+           
         margin-top: 6rem;
+        justify-self: center;
+        
 
         &-label{
             width: 50rem;
