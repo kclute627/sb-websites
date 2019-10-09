@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import ReactSvg from "react-svg";
 import { Link } from "react-router-dom";
+import {HashLink as Links } from 'react-router-hash-link';
 import logo from "../assets/logo.svg";
+
 
 class Navbar extends Component {
   render() {
-    let {center} = this.props;
+    let {center, pricing} = this.props;
     return (
       <div className="navbar__container">
         <div className= {center ? "navbar__logo center" : "navbar__logo start"} >
@@ -17,7 +19,7 @@ class Navbar extends Component {
               <Link to="/">Home</Link>
             </li>
             <li className="navbar__links-list-item">
-              <a href="#price">Pricing</a>
+              <Links smooth to={pricing} >Pricing </Links>
             </li>
 
             <li className="navbar__links-list-item">

@@ -5,7 +5,7 @@
         
         background: rgb(89, 190, 190);
         display: grid;
-        grid-template-rows: auto 18rem 1fr ;
+        grid-template-rows: auto 18rem 75%;
         grid-template-columns: .2fr minmax(900px, .95fr) .2fr;
     }
     &__navbar{
@@ -37,12 +37,20 @@
 
 .portsquare{
 
+    &__link{
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
 
     &-1{
         grid-column: 1/2;
         grid-row: 1/2;
         background: url('../../assets/circleCity.png');
-        @include port;      
+        @include port;    
+        
+        
        
         
     }
@@ -58,6 +66,57 @@
         grid-column: 3/4;
         grid-row: 1/2;
         background: url('../../assets/circleCity.png');
+        @include port;      
+       
+        
+    }
+
+   
+
+    &-4{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        background: url('../../assets/kclutter.png');
+        @include port;      
+       
+        
+    }
+    &-5{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        background: url('../../assets/circleCity.png');
+        @include port;      
+       
+        
+    }
+    &-6{
+        grid-column: 3/4;
+        grid-row: 2/3;
+        background: url('../../assets/circleCity.png');
+        @include port;      
+       
+        
+    }
+    &-7{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        background: url('../../assets/kclutter.png');
+        @include port;      
+       
+        
+    }
+    &-8{
+        grid-column: 2/3;
+        grid-row: 3/4;
+        background: url('../../assets/circleCity.png');
+        @include port;      
+       
+        
+    }
+    &-9{
+        grid-column: 3/4;
+        grid-row: 3/4;
+        background: url('../../assets/kclutter.png');
         @include port;      
        
         

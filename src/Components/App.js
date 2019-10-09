@@ -8,7 +8,8 @@ function App() {
   return (
     <div className="App">
       <Navbar
-      center = 'true' />
+      center = 'true'
+      pricing='/#price' />
       <Homepage />
       <Images  />
       <Pricing />
