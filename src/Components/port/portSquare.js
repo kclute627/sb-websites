@@ -10,3 +10,6 @@ const PortSquare = (props) => {
         </div>
     )
 }
+
+
+export default PortSquare ;
