@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "./Navbar";
-import { SketchPicker } from 'react-color';
+import { CirclePicker } from 'react-color';
+
 
 const encode = data => {
   return Object.keys(data)
@@ -15,7 +16,7 @@ class GetStarted extends Component {
     message: "",
     website: "",
     messageSent: null,
-    background: '#fff'  
+    background: [],  
   };
 
 
@@ -49,13 +50,15 @@ class GetStarted extends Component {
   };
 
   colorHandler = (color, event) => {
-      this.setState({background: color.hex})
+        let newColor = [...this.state.background, color.hex]
+
+      this.setState({background: newColor})
 
   }
   render() {
     const { name, message, email, website, background } = this.state;
     return (
-      <div className="getstarted__container" style={{background }}>
+      <div className="getstarted__container">
         <div className="getstarted__nav">
           <Navbar />
         </div>
@@ -116,12 +119,23 @@ class GetStarted extends Component {
                       <option value="no">No</option>
                   </select>
                   <li>Colors You would like used on your website?</li>
-                  <div className ="colorpicker__square">
+                  <div className="colorpicker__square-container">
+                  {this.state.background.map(cur => {
+                        return(
+                            
+                                 <div className ="colorpicker__square" style={{background: cur}}/>
+                           
+                            
 
-                  </div>
-                  <SketchPicker
-                  color={background}
-                  onChangeComplete={this.colorHandler} />
+                            
+                        )
+
+                  })  }
+                   </div>
+                 
+                  <CirclePicker                  
+                  
+                  onChange={this.colorHandler} />
               </ol>
             </label>
             <textarea
