@@ -11,16 +11,20 @@
 
     margin-top: 6rem;
     justify-self: center;
-    width: 65%;
+    width: 75%;
 
     &-label {
       width: 50rem;
+      text-transform: capitalize;
+      margin-bottom: 0.5rem;
     }
     &-name {
       padding: 1rem;
+      margin-bottom: 0.5rem;
     }
     &-emai {
       padding: 1rem;
+      margin-bottom: 1.5rem;
     }
     &-message {
       padding: 1rem;
@@ -30,6 +34,18 @@
     &-sites {
       resize: none;
       padding: 1.5rem;
+    }
+    &-input {
+      text-transform: capitalize;
+      padding: 1rem;
+      width: 19rem;
+    }
+    &-header {
+      font-size: 3rem;
+      text-transform: capitalize;
+    }
+    &-select {
+      padding: 1rem;
     }
   }
   &__forms {
@@ -51,18 +67,37 @@
 
   &__form-message {
     resize: none;
+    margin-bottom: 3rem; 
+    margin-top: 4rem;
+  }
+  &__header {
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 3.5rem;
+  }
+  &__select {
+    width: 16rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &-li {
     margin-bottom: 3rem;
   }
 }
 
-.colorpicker__square {
-  height: 5rem;
-  width: 5rem;
-  background: blue;
-  margin: 3rem;
+.colorpicker {
+  
+  &__square {
+    height: 5rem;
+    width: 5rem;
+    background: blue;
+    margin: 0 1rem 1rem 2.5rem;
 
-  &-container {
-    display: flex;
-    flex-wrap: wrap;
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 }

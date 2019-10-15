@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "./Navbar";
-import { CirclePicker } from 'react-color';
-
+import { CirclePicker } from "react-color";
 
 const encode = data => {
   return Object.keys(data)
@@ -16,11 +15,8 @@ class GetStarted extends Component {
     message: "",
     website: "",
     messageSent: null,
-    background: [],  
+    background: []
   };
-
-
-
 
   submitHandler = e => {
     fetch("/", {
@@ -50,11 +46,10 @@ class GetStarted extends Component {
   };
 
   colorHandler = (color, event) => {
-        let newColor = [...this.state.background, color.hex]
+    let newColor = [...this.state.background, color.hex];
 
-      this.setState({background: newColor})
-
-  }
+    this.setState({ background: newColor });
+  };
   render() {
     const { name, message, email, website, background } = this.state;
     return (
@@ -62,7 +57,11 @@ class GetStarted extends Component {
         <div className="getstarted__nav">
           <Navbar />
         </div>
+
         <div className="getstarted__form">
+          <h1 className="getstarted__header">
+            Tell Us a Little Bit about your Business
+          </h1>
           <form
             action=""
             className="getstarted__forms"
@@ -89,53 +88,48 @@ class GetStarted extends Component {
               className="getstarted__form-emai"
               onChange={this.changeHandler}
             />
+            <label htmlFor="" className="getstarted__form-label">
+              What Type of Website do you need?
+            </label>
 
-            <select name="website" onChange={this.changeHandler}>
-              
-              <option value="single" selected='true'>Single Page Website</option>
+            <select name="website" onChange={this.changeHandler} className="getstarted__select">
+              <option value="single" selected="true">
+                Single Page Website
+              </option>
               <option value="5page">5 Page Website</option>
               <option value="10page">10 Page Website</option>
             </select>
 
-            
-
-            <label htmlFor="" className="getstarted__form-input">
+            <label htmlFor="" className="getstarted__form-header">
               Tell Us a few things before we get GetStarted
               <ol>
-                  <li>What Industry Is your business in</li>
-                  <input type="text"/>
-                  <li>List several Websits you like</li>
-                  <textarea className="getstarted__form-sites">
-
-                  </textarea>
-                  <li>Do you Currenty Have a Domian Name and Logo</li>
-                  <select>
-                      <option value="no">No</option>
-                      <option value="yes">Yes</option>
-                  </select>
-                  <li>Will you need hosting?</li>
-                  <select>
-                      <option value="yes">Yes</option>
-                      <option value="no">No</option>
-                  </select>
-                  <li>Colors You would like used on your website?</li>
-                  <div className="colorpicker__square-container">
+                <li>What Industry Is your business in</li>
+                <input type="text" className="getstarted__form-input" />
+                <li>List several Websits you like</li>
+                <textarea className="getstarted__form-sites"></textarea>
+                <li>Do you Currenty Have a Domian Name and Logo</li>
+                <select className="getstarted__form-select">
+                  <option value="no">No</option>
+                  <option value="yes">Yes</option>
+                </select>
+                <li>Will you need hosting?</li>
+                <select className="getstarted__form-select">
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+                <li className="getstarted-li">Colors You would like used on your website?</li>
+                <div className="colorpicker__square-container">
                   {this.state.background.map(cur => {
-                        return(
-                            
-                                 <div className ="colorpicker__square" style={{background: cur}}/>
-                           
-                            
+                    return (
+                      <div
+                        className="colorpicker__square"
+                        style={{ background: cur }}
+                      />
+                    );
+                  })}
+                </div>
 
-                            
-                        )
-
-                  })  }
-                   </div>
-                 
-                  <CirclePicker                  
-                  
-                  onChange={this.colorHandler} />
+                <CirclePicker onChange={this.colorHandler} className="colorpicker" />
               </ol>
             </label>
             <textarea
