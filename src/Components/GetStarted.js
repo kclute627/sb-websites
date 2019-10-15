@@ -30,6 +30,7 @@ class GetStarted extends Component {
           email: "",
           message: "",
           website: "",
+          background: [],
           messageSent: true
         })
       )
