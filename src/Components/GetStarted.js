@@ -15,7 +15,8 @@ class GetStarted extends Component {
     message: "",
     website: "",
     messageSent: null,
-    background: []
+    background: [],
+    counter: 0,
   };
 
   submitHandler = e => {
@@ -31,6 +32,7 @@ class GetStarted extends Component {
           message: "",
           website: "",
           background: [],
+          counter: 0,
           messageSent: true
         })
       )
@@ -47,9 +49,58 @@ class GetStarted extends Component {
   };
 
   colorHandler = (color, event) => {
-    let newColor = [...this.state.background, color.hex];
+    let {counter} = this.state;
+    if(this.state.background.length < 4){
+      let newColor = [...this.state.background, color.hex];
+      counter++
+      this.setState({ 
+        background: newColor,
+        counter,
+      
+      });
+      ;
+    }else{
+      let newColor = [...this.state.background];
+      counter++
+      if(counter % 5 === 0 ){
+       newColor.splice(0,1, color.hex)
 
-    this.setState({ background: newColor });
+        this.setState({
+          background: newColor,
+          counter: counter++
+        })
+
+      }else if(counter % 6 === 0){
+
+        newColor.splice(1,1, color.hex)
+
+        this.setState({
+          background: newColor,
+          counter: counter++,
+        })
+      }else if(counter % 7 === 0){
+        newColor.splice(2,1, color.hex)
+
+        this.setState({
+          background: newColor,
+          counter: counter++,
+        })
+      }else if(counter % 8 === 0){
+        newColor.splice(3,1, color.hex)
+
+        this.setState({
+          background: newColor,
+          counter: counter++,
+        })
+      }else{
+        newColor.splice(0,1, color.hex)
+        this.setState({counter: 5, background: newColor,})
+      }
+    }
+
+      
+    
+    
   };
   render() {
     const { name, message, email, website, background } = this.state;
