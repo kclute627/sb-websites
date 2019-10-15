@@ -1,75 +1,68 @@
-.getstarted{
+.getstarted {
+  &__container {
+    display: grid;
+    grid-template-rows: 15rem minmax(40rem, auto) 10rem;
+    grid-template-columns: 0.4fr minmax(900px, 0.95fr) 0.4fr;
+    background: rgb(144, 144, 144);
+  }
+  &__form {
+    grid-column: 2/3;
+    grid-row: 2/3;
 
-    &__container{       
-         
-        display: grid;
-        grid-template-rows: 15rem minmax(40rem, auto) 10rem;
-        grid-template-columns: .4fr minmax(900px, .95fr) .4fr;
-        background: rgb(144, 144, 144);
+    margin-top: 6rem;
+    justify-self: center;
+    width: 65%;
+
+    &-label {
+      width: 50rem;
     }
-    &__form{
-        grid-column: 2/3;
-        grid-row: 2/3;   
-           
-        margin-top: 6rem;
-        justify-self: center;
-        width: 65%;
-        
-
-        &-label{
-            width: 50rem;
-            
-        }
-        &-name{
-           padding: 1rem;
-        }
-        &-emai{
-            padding: 1rem;
-        }
-        &-message{
-            padding: 1rem;
-            height: 14rem;
-
-        }
-
-        &-sites{
-            resize: none;
-            padding: 1.5rem;
-        }
-       
+    &-name {
+      padding: 1rem;
     }
-    &__forms{
-        display: flex;
-        flex-direction: column;
+    &-emai {
+      padding: 1rem;
     }
-   
-    &__nav{
-        grid-row: 1/2;
-        grid-column: 2/3;
+    &-message {
+      padding: 1rem;
+      height: 14rem;
     }
 
-    &__footer{
-        height: 100%;
-        width: 100%;
-        grid-row: 3/4;
-        grid-column: 2/3;
+    &-sites {
+      resize: none;
+      padding: 1.5rem;
     }
+  }
+  &__forms {
+    display: flex;
+    flex-direction: column;
+  }
 
-    &__form-message{
-        resize: none;
-        margin-bottom: 3rem;
-    }
+  &__nav {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+
+  &__footer {
+    height: 100%;
+    width: 100%;
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+
+  &__form-message {
+    resize: none;
+    margin-bottom: 3rem;
+  }
 }
 
-.colorpicker__square{
-    height: 5rem;
-    width: 5rem;
-    background: blue;
-    margin: 3rem;
+.colorpicker__square {
+  height: 5rem;
+  width: 5rem;
+  background: blue;
+  margin: 3rem;
 
-    &-container{
-        display: flex;
-        flex-wrap: wrap;
-
-    }
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
