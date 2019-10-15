@@ -43,6 +43,7 @@
     &-header {
       font-size: 3rem;
       text-transform: capitalize;
+      
     }
     &-select {
       padding: 1rem;
@@ -75,6 +76,15 @@
     text-transform: capitalize;
     text-align: center;
     font-size: 3.5rem;
+    border-bottom: 2px $color-primary solid;
+    margin-bottom: 2rem;
+    &-1{
+        font-size: 2rem;
+        border-bottom: 2px $color-primary solid;
+        width: 65%;
+        text-align: center;
+        margin-bottom: 1.5rem;;
+    }
   }
   &__select {
     width: 16rem;

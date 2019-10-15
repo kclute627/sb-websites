@@ -101,7 +101,10 @@ class GetStarted extends Component {
             </select>
 
             <label htmlFor="" className="getstarted__form-header">
-              Tell Us a few things before we get GetStarted
+              <h1 className="getstarted__header-1">
+                 Tell Us a few things before we get GetStarted
+              </h1>
+             
               <ol>
                 <li>What Industry Is your business in</li>
                 <input type="text" className="getstarted__form-input" />
