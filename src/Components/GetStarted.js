@@ -185,7 +185,7 @@ class GetStarted extends Component {
                   })}
                 </div>
 
-                <CirclePicker onChange={this.colorHandler} className="colorpicker" />
+                <CirclePicker onChange={this.colorHandler} colors= {["#fff", "#000", "rgb(51, 9, 240)", "rgb(240, 9, 20)", "rgb(28, 240, 9)", "rgb(4, 51, 0)", "rgb(211, 119, 0)", "#00bcd4", "#009688", "#4caf50", "#8bc34a", "#cddc39", "#ffeb3b", "#ffc107", "#ff9800", "#ff5722", "#795548", "#607d8b"]} className="colorpicker" />
               </ol>
             </label>
             <textarea
