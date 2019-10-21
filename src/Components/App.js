@@ -3,6 +3,7 @@ import Homepage from "../Components/Homepage/Homepage";
 import Navbar from "../Components/Navbar";
 import Images from "../Components/Screens/Images";
 import Pricing from "./Pricing/Pricing";
+import Footer from '../Components/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Homepage />
       <Images  />
       <Pricing />
+      <Footer />
     </div>
   );
 }

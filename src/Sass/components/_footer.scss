@@ -1,0 +1,36 @@
+.footer{
+  
+
+    &__container{
+        grid-row: 4/5;
+        grid-column: 1/-1;
+        background: black;
+        padding: 2rem;
+        display: flex;
+
+    }
+    &__address{
+        display: flex;
+        flex-direction: column;
+
+        &-header{
+            text-align: center;
+            border-bottom: 2px $color-primary solid;
+            margin-bottom: 1.5rem;
+            font-size: 3rem;
+        }
+        &-1{
+            text-align: center;
+        }
+        &-email{
+            text-decoration: none;
+            text-align: center;
+            color: white;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+    }
+}

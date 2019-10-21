@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactRotatingText from "react-rotating-text";
+import Footer from '../Footer';
 import { Link} from "react-router-dom";
 
 
@@ -56,6 +57,7 @@ class Homepage extends Component {
           
          
         </div>
+       
       </div>
        
     

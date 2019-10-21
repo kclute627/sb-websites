@@ -150,6 +150,7 @@ class GetStarted extends Component {
               </option>
               <option value="5page">5 Page Website</option>
               <option value="10page">10 Page Website</option>
+              <option value="Custom">Custom</option>
             </select>
 
             <label htmlFor="" className="getstarted__form-header">
