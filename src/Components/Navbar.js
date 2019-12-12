@@ -11,7 +11,10 @@ class Navbar extends Component {
     return (
       <div className="navbar__container">
         <div className= {center ? "navbar__logo center" : "navbar__logo start"} >
+          <Link to='/'>
           <ReactSvg className="navbar__logo-1" src={logo} />
+          </Link>
+          
         </div>
         <div className={center? "navbar__links" : "navbar__links work-navbar"}>
           <ul className="navbar__links-list">
