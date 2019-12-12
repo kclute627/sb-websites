@@ -20,11 +20,10 @@
     color: black;
     font-size: 5.5rem;
     font-weight: 700;
-    border-bottom: 3px solid darken($color: $color-primary, $amount: 50%);
-    text-transform: capitalize;
-    margin-top: 4rem;
+    border-bottom: 3px solid darken($color: $color-primary, $amount: 50%); 
     width: 45%;
     margin: 0 auto;
+    margin-top: 3rem; 
     
     
   }

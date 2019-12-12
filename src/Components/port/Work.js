@@ -24,6 +24,7 @@ class work extends Component {
            />
            <PortSquare
           className ='portsquare-3'
+          link= 'https://laughing-wright-42dc6c.netlify.com'
            />
             <PortSquare
           className ='portsquare-4'
